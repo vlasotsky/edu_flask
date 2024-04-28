@@ -1,0 +1,35 @@
+{% extends "base.html" %} 
+{% block title %}Book editing{% endblock %} 
+{% block body %}
+    <br />
+    <div class="container custom-container mt-5 mx-5">
+      <h1 class="custom-h1">Book editing</h1>
+      <form method="post">
+        <input
+          type="text"
+          name="title"
+          id="title"
+          class="form-control mb-4"
+          style="width: 400px; height: 35px; margin-top: 50px"
+          value="{{ book.title }}"
+          placeholder="Title of a book"
+        />
+        <input
+          type="text"
+          name="author"
+          id="author"
+          class="form-control mb-4"
+          style="width: 400px; height: 35px"
+          value="{{ book.author }}"
+          placeholder="Author of a book"
+        />
+        <input
+          type="submit"
+          class="btn btn-dark text-light"
+          value="Update"
+          style="width: 150px"
+        />
+      </form>
+    </div>
+    {% endblock %}
+    

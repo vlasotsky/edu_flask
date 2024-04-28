@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block title %} {{ book.title}} {% endblock %} {%
+block body %}
+<br />
+<div class="books mt-5 mx-5">
+  <h1>{{ book.title }}</h1>
+
+  <div class="alert alert-info">
+    <h2>{{ book.title }}</h2>
+    <p>{{ book.author }}</p>
+    <p><b>Date: {{ book.published.date() }}</b></p>
+    <a href="/books/{{ book.id }}/delete" class="btn btn-danger">Delete</a>
+    <a href="/books/{{ book.id }}/update" class="btn btn-success">Edit</a>
+  </div>
+</div>
+{% endblock %}

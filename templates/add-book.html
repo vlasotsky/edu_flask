@@ -1,0 +1,31 @@
+{% extends "base.html" %} {% block title %}about-page{% endblock %} {% block
+body %}
+<br />
+<div class="container custom-container mt-5 mx-5">
+  <h1 class="custom-h1">Adding a single book</h1>
+  <form method="post">
+    <input
+      type="text"
+      name="title"
+      id="title"
+      class="form-control mb-4"
+      style="width: 400px; height: 35px; margin-top: 50px"
+      placeholder="Title of a book"
+    />
+    <input
+      type="text"
+      name="author"
+      id="author"
+      class="form-control mb-4"
+      style="width: 400px; height: 35px"
+      placeholder="Author of a book"
+    />
+    <input
+      type="submit"
+      class="btn btn-dark text-light"
+      value="Send"
+      style="width: 150px"
+    />
+  </form>
+</div>
+{% endblock %}
