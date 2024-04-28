@@ -1,10 +1,10 @@
 {% extends "base.html" %} {% block title %} {{ book.title}} {% endblock %} {%
 block body %}
 <br />
-<div class="books mt-5 mx-5">
-  <h1>{{ book.title }}</h1>
+<div class="books font-weight-normal mt-5 mx-5 text-center">
+  <h1>ID {{ book.id }}: {{ book.title }}</h1>
 
-  <div class="alert alert-info">
+  <div class="alert alert-info" style="margin-top: 50px;">
     <h2>{{ book.title }}</h2>
     <p>{{ book.author }}</p>
     <p><b>Date: {{ book.published.date() }}</b></p>

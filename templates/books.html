@@ -1,12 +1,12 @@
 {% extends "base.html" %} {% block title %} All books available {% endblock %}
 {% block body %}
 <br />
-<div class="books mt-5 mx-5">
+<div class="books mt-5 mx-5 text-center">
   <h1>Books currently available</h1>
 
   {% if books|length > 0 %} 
     {% for el in books %}
-    <div class="alert alert-info">
+    <div class="alert alert-info" style="margin-top: 50px;">
       <h2>{{ el.title }}</h2>
       <p>{{ el.author }}</p>
       <p><b>Date: {{ el.published.date() }}</b></p>
@@ -14,7 +14,7 @@
     </div>
     {% endfor %} 
   {% else %}
-    <h2 class="mt-5">There are no books in list yet</h2>
+    <h2 class="font-weight-normal px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">No books exist.</h2>
   {% endif %} 
 </div>
 {% endblock %}
